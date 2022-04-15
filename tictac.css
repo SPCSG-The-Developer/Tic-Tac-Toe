@@ -1,0 +1,74 @@
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #eef3fd;
+}
+.tic-tac{
+ display:grid;
+ grid-template-columns: repeat(3,100px);
+ grid-auto-rows: 100px;
+ justify-content: center;
+ align-content: center;
+ min-height: 60vh;
+}
+.tic-tac > button{
+ outline: none;
+ border:1px solid #dd4d69;
+ background-color: #FFDBAC;
+ color: #DD4856;
+ font-size: 50px;
+ font-weight: bold;
+}
+.tic-tac > button:hover{
+ cursor: pointer;
+ background-color: rgba(255, 219,172, 0.8);
+}
+.winner{
+ display: none;
+ position: fixed;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ z-index: 1000;
+ background-color: rgba(0, 0, 0, 0.9);
+}
+.winner > .winnerBox{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ height: 50vh;
+ width: 50vw;
+ background-color: #FFDBAC;
+ font-size: 30px;
+ color: white;
+ text-align: center;
+}
+.restart{
+ height: 7vh;
+ width: 10vw;
+ border:2px solid white;
+ outline: none;
+ padding: 10px 10px 10px 10px;
+ margin: 20px 30px 20px 30px;
+ font-size: 20px;
+ background-color: #FFDBAC;
+}
+.restart:hover{
+ cursor: pointer;
+ background-color: rgba(0,0,0,0.1);
+}
+
+@media only screen and (max-width:760px) {
+  .restart{
+   height: 5vh;
+   width: 15vw;
+   border:2px solid white;
+   outline: none;
+   padding: 10px 10px 10px 10px;
+   margin: 20px 30px 20px 30px;
+   font-size: 15px;
+   background-color: #FFDBAC;
+  }
+}
